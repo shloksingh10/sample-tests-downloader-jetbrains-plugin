@@ -4,6 +4,7 @@ import okhttp3.OkHttpClient
 import okhttp3.Request
 import org.jsoup.Jsoup
 import com.intellij.openapi.diagnostic.Logger
+import com.intellij.openapi.vfs.VirtualFileManager
 import java.io.IOException
 import java.nio.file.Files
 import java.nio.file.Paths
@@ -87,6 +88,7 @@ fun downloadSampleTests(contestId: String, problemId: String, outputDirectory: S
                 logger.info("Writing sample test #${i + 1} to files: $inputFileName and $outputFileName")
                 Files.write(inputFilePath, inputText.toByteArray())
                 Files.write(outputFilePath, outputText.toByteArray())
+                VirtualFileManager.getInstance().asyncRefresh(null)
                 logger.info("Successfully wrote $inputFileName and $outputFileName")
             }
         }
