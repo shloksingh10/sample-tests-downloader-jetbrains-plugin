@@ -29,6 +29,9 @@
     <!-- Extension points defined by the plugin.
          Read more: https://plugins.jetbrains.com/docs/intellij/plugin-extension-points.html -->
     <extensions defaultExtensionNs="com.intellij">
+        <toolWindow id="Codeforces Tests Loader"
+                    anchor="right"
+                    factoryClass="com.shlok.sampletestdownloader.ui.CodeforcesToolWindowFactory" />
 
     </extensions>
 </idea-plugin>
