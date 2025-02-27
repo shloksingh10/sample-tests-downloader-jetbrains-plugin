@@ -3,6 +3,7 @@ package com.shlok.sampletestdownloader.ui
 import com.intellij.openapi.project.Project
 import com.intellij.openapi.wm.ToolWindow
 import com.intellij.openapi.wm.ToolWindowFactory
+import com.intellij.openapi.util.IconLoader
 import com.intellij.ui.content.ContentFactory
 
 /**
@@ -14,7 +15,12 @@ class CodeforcesToolWindowFactory : ToolWindowFactory {
         val panel = CodeforcesToolWindowPanel(project)
         val content = contentFactory.createContent(panel, "", false)
         toolWindow.contentManager.addContent(content)
-        // Set the emoji icon (📋) on the tool window stripe.
-        toolWindow.setIcon(EmojiIcon("📋", 16))
+
+        // Load the SVG icon from resources
+        val icon = IconLoader.getIcon("/icons/logo.svg", CodeforcesToolWindowFactory::class.java)
+        toolWindow.setIcon(icon)
+
+        // Set the stripe title which is shown as tooltip on hover
+        toolWindow.setStripeTitle("Codeforces Tests Downloader")
     }
 }

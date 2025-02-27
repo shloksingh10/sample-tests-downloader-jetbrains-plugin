@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- Updated with colored bars -->
-<svg width="40px" height="40px" viewBox="0 0 24 24" role="img" xmlns="http://www.w3.org/2000/svg">
+<svg width="10px" height="10px" viewBox="0 0 24 24" role="img" xmlns="http://www.w3.org/2000/svg">
     <!-- Left bar in yellow -->
     <path d="M4.5 7.5A1.5 1.5 0 0 1 6 9v10.5A1.5 1.5 0 0 1 4.5 21h-3C.673 21 0 20.328 0 19.5V9c0-.828.673-1.5 1.5-1.5h3" fill="#FFD700"/>
     <!-- Middle bar in blue -->
